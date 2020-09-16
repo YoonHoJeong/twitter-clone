@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import Router from "./Router";
+import { authService } from "firebase";
 
 function App() {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
   return (
     <div>
-      <Router />
+      <Router isLoggedIn={isLoggedIn} />
     </div>
   );
 }
